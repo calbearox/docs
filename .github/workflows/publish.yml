@@ -11,15 +11,16 @@ jobs:
     strategy:
       matrix:
         node-version: [14.x]
-    steps:
+    steps: 
       - uses: actions/checkout@v2
       - name: Install deps
         run: yarn
       - name: Deploy
         run: yarn build
       - name: Deploy
+
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.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 }}
           publish_dir: ./public
           cname: docs.top.gg
